@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap"
+      rel="stylesheet">
+    <!-- Import bootstrap files -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Import font awesome library -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- Import Styling file of sign-in page -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/sign-in.css">
+  </head>
+
+  <body>
+    <div
+      class="landing w-100 d-flex align-items-center justify-content-center py-4 position-relative text-capitalize">
+      <div class="container">
+        <div class="login-box text-dark mx-auto p-2">
+          <div class="image text-center">
+            <img class="logo" src="./imgs/logo.png" alt="logo photo">
+          </div>
+          <h1 class="text-center fs-3">تسجيل الدخول</h1>
+          <form class="mx-auto">
+            <label class="form-label">البريد الالكترونى</label>
+            <input class="form-control" type="email" placeholder="ادخل بريدك الالكترونى" required>
+            <label class="form-label">كلمة المرور</label>
+            <input class="form-control" type="password" placeholder="ادخل كلمة المرور" required>
+            <input class="btn fs-6 d-block my-3 w-50 mx-auto text-light" type="button" id="sign-btn"
+              onclick="map2()" value="تسجيل الدخول" id="log">
+          </form>
+        </div>
+        <p class="text-center fs-5 text-light my-2">ليس لديك حساب؟ <br><a
+            class="sign-link text-decoration-none fw-bold" href="./sign-up.html"> اشترك من هنا</a>
+        </p>
+      </div>
+    </div>
+    <!-- Import JS files -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/sign/sign-in.js"></script>
+  </body>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of page -->
+    <title>ملوى</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap"
+      rel="stylesheet">
+    <!-- Import bootstrap files -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Import font awesome library -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- Import Styling file of home page -->
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+
+  <body>
+    <!-- Start Loading Spinner -->
+    <div
+      class="overlay position-fixed w-100 h-100 d-flex align-items-center justify-content-center">
+      <div class="loading">
+      </div>
+    </div>
+
+    <!-- ============================= -->
+
+    <!-- Start Mallawi section -->
+    <section class="mallawi py-5 text-light position-relative">
+      <button class="home-centers position-fixed text-dark btn fs-5"
+        onclick="centers()">المراكز<i class="fa fa-puzzle-piece me-1"></i></button>
+      <div class="container">
+        <div class="row g-3 p-3">
+          <div class="col-md-5 position-relative">
+            <div class="left">
+              <div class="card position-relative rounded-3 overflow-hidden mb-4 text-white">
+                <img class="img-fluid" src="./imgs/tell-1.jpg" alt="photo">
+                <p class="badge fs-6 position-absolute">تل العمارنة</p>
+                <div class="card-body position-absolute">
+                  <a class="card-title link-light text-decoration-none fs-3" onclick="amarna()">تل
+                    العمارنة</a>
+                  <p>
+                    <span>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star empty"></i>
+                    </span>
+                    <span>
+                      (33874 مراجعة)
+                    </span>
+                  </p>
+                  <div class="price d-flex align-items-center justify-content-between">
+                    <p class="fs-6 ">السعر: <span class="fw-bold fs-5">10 جنيه مصرى</span></p>
+                    <button onclick="amarna()"
+                      class="btn btn-warning fs-5 d-flex align-items-center"> المزيد
+                      <i class="fa fa-angle-left me-1"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-3 p-3">
+          <div class="col-md-5 me-auto position-relative">
+            <div class="right">
+              <div class="card position-relative rounded-3 overflow-hidden mb-4 text-white">
+                <img class="img-fluid" src="./imgs/tuna-2.jpg" alt="photo">
+                <p class="badge fs-6 position-absolute">تونة الجبل</p>
+                <div class="card-body position-absolute">
+                  <a class="card-title link-light text-decoration-none fs-3" onclick="tuna()">تونة
+                    الجبل</a>
+                  <p>
+                    <span>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                    </span>
+                    <span>
+                      (76529 مراجعة)
+                    </span>
+                  </p>
+                  <div class="price d-flex align-items-center justify-content-between">
+                    <p class="fs-6 ">السعر: <span class="fw-bold fs-5">10 جنيه مصرى</span></p>
+                    <button onclick="tuna()" class="btn btn-warning fs-5 d-flex align-items-center">
+                      المزيد
+                      <i class="fa fa-angle-left me-1"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-3 p-3">
+          <div class="col-md-5 position-relative">
+            <div class="left">
+              <div class="card position-relative rounded-3 overflow-hidden mb-4 text-white">
+                <img class="img-fluid" src="./imgs/tell-4.jpg" alt="photo">
+                <p class="badge fs-6 position-absolute">الاشمونين</p>
+                <div class="card-body position-absolute">
+                  <a class="card-title link-light text-decoration-none fs-3"
+                    onclick="ashmonin()">الاشمونين</a>
+                  <p>
+                    <span>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star-half text-warning"></i>
+                    </span>
+                    <span>
+                      (45387 مراجعة)
+                    </span>
+                  </p>
+                  <div class="price d-flex align-items-center justify-content-between">
+                    <p class="fs-6 ">السعر: <span class="fw-bold fs-5">10 جنيه مصرى</span></p>
+                    <button onclick="ashmonin()"
+                      class="btn btn-warning fs-5 d-flex align-items-center"> المزيد
+                      <i class="fa fa-angle-left me-1"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-3 p-3">
+          <div class="col-md-5 me-auto position-relative">
+            <div class="right">
+              <div class="card position-relative rounded-3 overflow-hidden mb-4 text-white">
+                <img class="img-fluid" src="./imgs/museum-4.jpg" alt="photo">
+                <p class="badge fs-6 position-absolute">متحف ملوى</p>
+                <div class="card-body position-absolute">
+                  <a class="card-title link-light text-decoration-none fs-3" onclick="museum()">متحف
+                    ملوى</a>
+                  <p>
+                    <span>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                    </span>
+                    <span>
+                      (33874 مراجعة)
+                    </span>
+                  </p>
+                  <div class="price d-flex align-items-center justify-content-between">
+                    <p class="fs-6 ">السعر: <span class="fw-bold fs-5">10 جنيه مصرى</span></p>
+                    <button onclick="museum()"
+                      class="btn btn-warning fs-5 d-flex align-items-center"> المزيد
+                      <i class="fa fa-angle-left me-1"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Start Mallawi section -->
+
+    <!-- Import JS files -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+
+</html>
