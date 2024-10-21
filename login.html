@@ -4,11 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-      content="This is game for tourism to learn and inform people about tourism places with exiting way">
-    <meta name="Keywords" content="Tourism - tours - game - travel">
-    <!-- Title of page -->
-    <title>اشتراك</title>
+    <title>تسجيل الدخول</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon">
     <!-- Google fonts -->
@@ -29,28 +25,23 @@
     <div
       class="landing w-100 d-flex align-items-center justify-content-center py-4 position-relative text-capitalize">
       <div class="container">
-        <div class="signup-box text-dark mx-auto p-2">
+        <div class="login-box text-dark mx-auto p-2">
           <div class="image text-center">
             <img class="logo" src="./imgs/logo.png" alt="logo photo">
           </div>
-          <h1 class="text-center fs-3">تسجيل حساب</h1>
+          <h1 class="text-center fs-3">تسجيل الدخول</h1>
           <form class="mx-auto">
-            <label class="form-label">الاسم الاول</label>
-            <input class="form-control" id="user" type="text" placeholder="ادخل الاسم الاول"
-              required>
-            <label class="form-label">الاسم الاخير</label>
-            <input class="form-control" type="text" placeholder="ادخل الاسم الاخير">
-            <label class="form-label">بريد الكترونى</label>
+            <label class="form-label">البريد الالكترونى</label>
             <input class="form-control" type="email" placeholder="ادخل بريدك الالكترونى" required>
             <label class="form-label">كلمة المرور</label>
             <input class="form-control" type="password" placeholder="ادخل كلمة المرور" required>
             <input class="btn fs-6 d-block my-3 w-50 mx-auto text-light" type="button" id="sign-btn"
-              value="تسجيل حساب" onclick="map1()">
+              onclick="map2()" value="تسجيل الدخول" id="log">
           </form>
         </div>
-        <p class="text-center fs-5 text-light my-2">لديك حساب بالفعل؟ <br><a
-            class="sign-link text-decoration-none fw-bold" href="./login.html">تسجيل الدخول
-            هنا</a></p>
+        <p class="text-center fs-5 text-light my-2">ليس لديك حساب؟ <br><a
+            class="sign-link text-decoration-none fw-bold" href="./index.html"> اشترك من هنا</a>
+        </p>
       </div>
     </div>
     <!-- Import JS files -->
@@ -58,5 +49,3 @@
     <script src="./js/all.min.js"></script>
     <script src="./js/sign/sign-in.js"></script>
   </body>
-
-</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of page -->
+    <title>متحف ملوى</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap"
+      rel="stylesheet">
+    <!-- Import bootstrap files -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Import font awesome library -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- Import Styling file of home page -->
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+
+  <body>
+    <!-- Start museum page -->
+    <section class="site py-5 text-light text-capitalize">
+      <div class="d-flex">
+        <button class="home-centers position-fixed btn fs-5" onclick="mallawi()">المزارات<i
+            class="fa fa-puzzle-piece me-1"></i></button>
+        <div class="score position-fixed badge fs-5 bg-success rounded-pill">
+          <span>نقاطك </span>
+          <span></span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="shows">
+          <div class="row g-3 p-3">
+            <div class="col-md-8">
+              <div class="image shadow-lg">
+                <div class="carousel slide rounded-3 overflow-hidden" id="tell-imgs"
+                  data-bs-ride="carousel">
+                  <div class="carousel-inner carousel-fade">
+                    <div class="carousel-item">
+                      <img class="w-100" src="./imgs/museum-1.jpg" alt="photo">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="w-100" src="./imgs/museum-3.jpg" alt="photo">
+                    </div>
+                    <div class="carousel-item active">
+                      <img class="w-100" src="./imgs/museum-4.jpg" alt="photo">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="w-100" src="./imgs/museum-5.jpg" alt="photo">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="w-100" src="./imgs/museum-6.jpg" alt="photo">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="caption w-100 text-center">
+                <p class="badge my-2 fs-5">متحف ملوى</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="transportation p-3 shadow-lg">
+                <h3 class="fw-bold text-center mb-4">وسائل المواصلات</h3>
+                <ul class="text-light fs-4 list-unstyled">
+                  <li class="mb-3"><i class="fa fa-bus"></i> الاتوبيسات</li>
+                  <li class="mb-3"><i class="fa fa-taxi"></i> التاكسى</li>
+                  <li class="mb-3"><i class="fa fa-car"></i> سيارة خاصة</li>
+                </ul>
+                <img
+                  class="img-pin position-absolute bottom-0 end-0 mb-3 me-3 rounded-circle shadow d-none d-md-block"
+                  src="./imgs/pharaoh1.png" alt="photo">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <div class="row g-3 p-3">
+            <div class="col-md-6">
+              <div class="tickets p-3 shadow-lg">
+                <h3 class="fw-bold text-center mb-3">سعر التذكرة</h3>
+                <ul class="fs-5 list-unstyled">
+                  <li>مصرى: <b>10 جنيه مصرى</b></li>
+                  <li>طالب مصرى: <b>5 جنيه مصرى</b></li>
+                  <li>اجنبى: <b>60 جنيه مصرى</b></li>
+                  <li>طالب اجنبى: <b>30 جنيه مصرى</b></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="times p-3 shadow-lg">
+                <h3 class="fw-bold text-center mb-3">المواعيد</h3>
+                <p class="fs-5"><b>من 9 صباحا حتى 4 مساءا</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="activities p-3 rounded-3 shadow-lg">
+          <h3 class="fw-bold text-center">اهم المعلومات عن متحف ملوى</h3>
+          <ul class="list-unstyled p-0">
+            <div class="row g-3 p-3 align-items-center">
+              <div class="col-md-6">
+                <li class="mb-3 p-2 rounded-3 shadow-lg">
+                  <h4 class="fw-bold">تم انشاء المتحف فى 1962</h4>
+                </li>
+                <li class="mb-3 p-2 rounded-3 shadow-lg">
+                  <h4 class="fw-bold">افتتح للزياره فى عام 1963</h4>
+                </li>
+              </div>
+              <div class="col-md-6">
+                <li class="mb-3 p-2 rounded-3 shadow-lg">
+                  <h4 class="fw-bold">يقع متحف ملوى بين تونا الجبل والاشمونين
+                  </h4>
+                </li>
+                <li class="mb-3 p-2 rounded-3 shadow-lg">
+                  <h4 class="fw-bold">معظم القطع الاثرية المتواجدة بالمتحف هى من تونا الجبل
+                    والاشمونين وقطع من تل العمارنه</h4>
+                </li>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex">
+        <div class="link w-100 d-flex align-items-center justify-content-center">
+          <button onclick="getMuseumPoints()"
+            class="btn btn-warning fs-5 d-flex align-items-center my-4">الاسئلة<i
+              class="fa fa-sheet-plastic me-1"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- End museum page -->
+
+    <!-- Import JS files -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+
+</html>

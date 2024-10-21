@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="This is game for tourism to learn and inform people about tourism places with exiting way">
+    <meta name="Keywords" content="Tourism - tours - game - travel">
+    <!-- Title of page -->
+    <title>المحافظات</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap"
+      rel="stylesheet">
+    <!-- Import bootstrap files -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Import font awesome library -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- Import Styling file of home page -->
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+
+  <body class="text-capitalize">
+    <!-- Start Loading Spinner -->
+    <div class="overlay position-fixed w-100 h-100 d-flex align-items-center justify-content-center">
+      <div class="loading">
+      </div>
+    </div>
+    
+    <!-- ============================= -->
+    <div class="body">
+      <section class="governorates">
+        <div
+          class="profile position-fixed rounded-circle p-3 d-flex align-items-center justify-content-center shadow-lg"
+          onclick="profile()">
+          <img class="img-profile rounded-circle" src="./imgs/logo.png" alt="logo-photo">
+        </div>
+        <div class="row gx-0 flex-md-row">
+          <div class="col-md-4 position-relative z-3" id="avatar">
+            <div class="avatar position-relative">
+              <div class="info text-center text-light fs-5 p-2"></div>
+              <div class="image d-flex align-items-center justify-content-center">
+                <img src="./imgs/avatar-hi.webp" alt="avatar-img" id="avatar-img">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="map position-relative">
+              <div class="line">
+                <h3 class="position-absolute d-none d-md-block">اختار محافظة</h3>
+                <div class="row">
+                  <div class="col-6 col-md-3">
+                    <div class="shape one rounded-circle position-absolute">
+                      <span
+                        class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2">Minia</span>
+                      <a onclick="centers()"><img
+                          class="rounded-circle img-fluid border border-3 border-light"
+                          src="./imgs/minia-logo.jpg" alt="Minia Logo"></a>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="shape locked two rounded-circle position-absolute">
+                      <span
+                        class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2">Giza</span>
+                      <a href="#"><img class="rounded-circle img-fluid border border-3 border-light"
+                          src="./imgs/giza-logo.jpg" alt="Minia Logo"></a>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="shape locked three rounded-circle position-absolute">
+                      <span
+                        class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2">Luxor</span>
+                      <a href="#"><img class="rounded-circle img-fluid border border-3 border-light"
+                          src="./imgs/luxor-logo.jpg" alt="Minia Logo"></a>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="shape locked four rounded-circle position-absolute">
+                      <span
+                        class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2">Cairo</span>
+                      <a href="#"><img class="rounded-circle img-fluid border border-3 border-light"
+                          src="./imgs/cairo-logo.jpg" alt="Minia Logo"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6 col-md-3">
+                    <div class="shape locked five rounded-circle position-absolute">
+                      <span
+                        class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2">Aswan</span>
+                      <a href="#"><img class="rounded-circle img-fluid border border-3 border-light"
+                          src="./imgs/aswan-logo.jpg" alt="Minia Logo"></a>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="shape locked six rounded-circle position-absolute">
+                      <span
+                        class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2">RedSea</span>
+                      <a href="#"><img class="rounded-circle img-fluid border border-3 border-light"
+                          src="./imgs/redsee-logo.jpg" alt="Minia Logo"></a>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="shape locked seven rounded-circle position-absolute">
+                      <span
+                        class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2">Alexanderia</span>
+                      <a href="#"><img class="rounded-circle img-fluid border border-3 border-light"
+                          src="./imgs/alex-logo.jpg" alt="Minia Logo"></a>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="shape locked eight rounded-circle position-absolute">
+                      <span
+                        class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2">Ismaalia</span>
+                      <a href="#"><img class="rounded-circle img-fluid border border-3 border-light"
+                          src="./imgs/gov.jpg" alt="Minia Logo"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <audio src="./audio/pharonic.mp3" loop preload="auto" id="music" type="mp3"></audio>
+    </div>
+    <!-- Import JS files -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+
+</html>

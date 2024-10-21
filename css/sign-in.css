@@ -1,0 +1,98 @@
+:root {
+  --blue: #41A0F2;
+  --red: #EC1923;
+  --yellow: #FFA41D;
+  --brown: #543F46;
+  --white-shadow: 5px 10px 30px 5px rgba(255, 255, 255, 0.4);
+  --black-shadow: 5px 10px 30px 5px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  background-color: var(--bieg);
+}
+
+.landing {
+  background-image: url("../imgs/landing2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+
+    #sign-btn {
+      background-color: var(--yellow);
+    }
+
+    .login-box,
+    .signup-box {
+      width: 360px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.5);
+      box-shadow: var(--black-shadow);
+
+      .logo {
+        width: 120px;
+      }
+
+      @media(max-width: 576px) {
+        width: 280px;
+      }
+
+      form {
+        width: 90%;
+      }
+
+      input {
+        caret-color: var(--orange);
+      }
+    }
+
+    .sign-link {
+      color: var(--yellow);
+    }
+  }
+}
+
+.portal {
+  background-image: url("../imgs/landing2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+
+  .btn-tran {
+    transition: .5s;
+    background-color: var(--blue);
+    color: white;
+    &:hover {
+      transform: rotate(5deg) scale(1.1);
+      box-shadow: var(--white-shadow);
+      background-color: var(--brown);
+      color: var(--yellow);
+    }
+  }
+}

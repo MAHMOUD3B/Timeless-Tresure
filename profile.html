@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="This is game for tourism to learn and inform people about tourism places with exiting way">
+    <meta name="Keywords" content="Tourism - tours - game - travel">
+    <!-- Title of page -->
+    <title>صفحة التحكم</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap"
+      rel="stylesheet">
+    <!-- Import bootstrap files -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Import font awesome library -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- Import Styling file of home page -->
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+
+  <body class="text-capitalize">
+    <!-- Start profile -->
+    <div class="profile-page vh-100 position-relative">
+      <div class="row gx-0">
+        <div class="col-md-2">
+          <div class="side vh-100 bg-dark rounded-start-3 p-3 position-fixed z-3">
+            <div
+              class="arrow d-md-none bg-dark position-absolute top-50 translate-middle-y fs-5 d-flex align-items-center justify-content-center rounded-start-2">
+              <div class="animate">
+                <span class="left">
+                  <i class="fa fa-angle-double-left"></i>
+                </span>
+                <span class="right d-none">
+                  <i class="fa fa-angle-double-right"></i>
+                </span>
+              </div>
+            </div>
+            <ul class="list-unstyled p-0">
+              <li class="navi-btn p-2 rounded-3 mb-3" onclick="govs()"><i
+                  class="fa fa-map-location-dot ms-1"></i>المحافظات</li>
+              <li class="navi-btn p-2 rounded-3 mb-3" onclick="showHideRedeem()" id="redeem"><i
+                  class="fa fa-right-left ms-1"></i>استرداد النقاط</li>
+              <li class="active navi-btn p-2 rounded-3 mb-3" onclick="showHideSettings()"
+                id="settings"><i class="fa fa-gears ms-1"></i>اعدادات الحساب</li>
+            </ul>
+            <button class="logout btn position-absolute bottom-0 mb-3 end-0 me-3"
+              onclick="logout()">تسجيل الخروج
+              <i class="fa fa-sign-out-alt me-1"></i></button>
+          </div>
+        </div>
+        <div class="col-md-10 p-3">
+          <div class="redeem h-100 bg-secondary px-3 py-5 rounded-3 position-relative d-none">
+            <div class="score position-absolute badge fs-5 text-bg-dark rounded-3">
+              <span>نقاطك </span>
+              <span></span>
+            </div>
+            <div class="row align-items-center justify-content-center g-3 mt-2">
+              <div class="col-md-3">
+                <div class="card overflow-hidden shadow-lg text-center text-md-end" id="card">
+                  <img class="card-img-top" src="./imgs/tell-1.jpg"></img>
+                  <div class="card-body text-bg-dark">
+                    <div class="info" data-points="100" data-place="تذكرة مجانية الى تل العمارنة">
+                      <h4 class="card-title mb-3">تل العمارنة</h4>
+                      <p class="card-text fs-5 badge text-bg-warning mb-3 d-block">100 نقطة</p>
+                      <button class="btn btn-primary w-100" id="redeem-btn"
+                        onclick="redeemPoints()">استرداد <i
+                          class="fa fa-right-left me-1"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card overflow-hidden shadow-lg text-center text-md-end" id="card">
+                  <img class="card-img-top" src="./imgs/tuna-1.jpg"></img>
+                  <div class="card-body text-bg-dark">
+                    <div class="info" data-points="50" data-place="تذكرة مجانية الى تونة الجبل">
+                      <h4 class="card-title mb-3">تونة الجبل</h4>
+                      <p class="card-text fs-5 badge text-bg-warning mb-3 d-block">50 نقطة</p>
+                      <button class="btn btn-primary w-100" id="redeem-btn"
+                        onclick="redeemPoints()">استرداد <i
+                          class="fa fa-right-left me-1"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card overflow-hidden shadow-lg text-center text-md-end" id="card">
+                  <img class="card-img-top" src="./imgs/ashmonin-3.jpg"></img>
+                  <div class="card-body text-bg-dark">
+                    <div class="info" data-points="120" data-place="تذكرة مجانية الى الاشمونين">
+                      <h4 class="card-title my-3">الاشمونين</h4>
+                      <p class="card-text fs-5 badge text-bg-warning mb-3 d-block">120 نقطة</p>
+                      <button class="btn btn-primary w-100" id="redeem-btn"
+                        onclick="redeemPoints()">استرداد <i
+                          class="fa fa-right-left me-1"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card overflow-hidden shadow-lg text-center text-md-end" id="card">
+                  <img class="card-img-top" src="./imgs/museum-1.jpg"></img>
+                  <div class="card-body text-bg-dark">
+                    <div class="info" data-points="150" data-place="تذكرة مجانية الى متحف ملوى">
+                      <h4 class="card-title mb-3">متحف ملوى</h4>
+                      <p class="card-text fs-5 badge text-bg-warning mb-3 d-block">150 نقطة</p>
+                      <button class="btn btn-primary w-100" id="redeem-btn"
+                        onclick="redeemPoints()">استرداد <i
+                          class="fa fa-right-left me-1"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card overflow-hidden shadow-lg text-center text-md-end" id="card">
+                  <img class="card-img-top" src="./imgs/nile-1.jpg"></img>
+                  <div class="card-body text-bg-dark">
+                    <div class="info" data-points="60" data-place="تذكرة مجانية الى نهر النيل">
+                      <h4 class="card-title mb-3">نهر النيل</h4>
+                      <p class="card-text fs-5 badge text-bg-warning mb-3 d-block">60 نقطة</p>
+                      <button class="btn btn-primary w-100" id="redeem-btn"
+                        onclick="redeemPoints()">استرداد <i
+                          class="fa fa-right-left me-1"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card overflow-hidden shadow-lg text-center text-md-end" id="card">
+                  <img class="card-img-top" src="./imgs/bhnasa-1-repeated.jpg"></img>
+                  <div class="card-body text-bg-dark">
+                    <div class="info" data-points="130" data-place="تذكرة مجانية الى البهنسا">
+                      <h4 class="card-title mb-3">البهنسا</h4>
+                      <p class="card-text fs-5 badge text-bg-warning mb-3 d-block">130 نقطة</p>
+                      <button class="btn btn-primary w-100" id="redeem-btn"
+                        onclick="redeemPoints()">استرداد <i
+                          class="fa fa-right-left me-1"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="info text-bg-dark mt-3 p-3 rounded-3">
+                  <p class="fs-4">قم باسترداد نقاطك التى حصلت عليها من الاسئلة بتذاكر مجانية
+                    لمزاراتك المفضلة</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="settings h-100 bg-secondary px-3 py-5 rounded-3 position-relative">
+            <div class="person-info bg-light shadow-lg p-3 rounded-3 text-center text-md-end mb-3">
+              <div class="profile-img rounded-circle mx-auto me-md-0">
+                <img class="img-fluid" src="./imgs/logo.png" alt="profile-img">
+              </div>
+              <h3 class="person-name"></h3>
+              <div class="progress">
+                <span class="progress-bar-striped progress-bar-animated bg-primary"
+                  id="progress-width"></span>
+              </div>
+            </div>
+            <div class="places-info bg-white shadow-lg p-3 rounded-3 text-center text-md-end mb-3">
+              <h3>الاماكن التى تم زيارتها</h3>
+              <ul class="list-unstyled p-0" id="visited-places">
+                <li class="p-2 text-bg-dark mb-3 rounded-3 fs-4"></li>
+                <li class="p-2 text-bg-dark mb-3 rounded-3 fs-4"></li>
+                <li class="p-2 text-bg-dark mb-3 rounded-3 fs-4"></li>
+                <li class="p-2 text-bg-dark mb-3 rounded-3 fs-4"></li>
+                <li class="p-2 text-bg-dark mb-3 rounded-3 fs-4"></li>
+                <li class="p-2 text-bg-dark mb-3 rounded-3 fs-4"></li>
+              </ul>
+            </div>
+            <div class="tickets-info bg-white shadow-lg p-3 rounded-3 text-center text-md-end">
+              <h3>التذاكر التى تم الحصول عليها</h3>
+              <ul class="list-unstyled p-0" id="buyed-tickets">
+                <li class="p-2 text-bg-dark mb-3 rounded-3 fs-4"></li>
+                <li class="p-2 text-bg-dark mb-3 rounded-3 fs-4"></li>
+                <li class="p-2 text-bg-dark mb-3 rounded-3 fs-4"></li>
+                <li class="p-2 text-bg-dark mb-3 rounded-3 fs-4"></li>
+                <li class="p-2 text-bg-dark mb-3 rounded-3 fs-4"></li>
+                <li class="p-2 text-bg-dark mb-3 rounded-3 fs-4"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="done alert alert-success position-fixed translate-middle top-50 start-50 fs-4 d-none">
+        تم استرداد التذكرة بنجاح
+      </div>
+      <div
+        class="error alert alert-danger position-absolute translate-middle top-50 start-50 fs-4 d-none">
+        ليس لديك نقاط تكفى لاسترداد هذه التذكرة!
+      </div>
+    </div>
+    <!-- End profile -->
+    <audio src="./audio/success.wav" preload="auto" id="success" type="mp3"></audio>
+    <audio src="./audio/fail.wav" preload="auto" id="fail" type="mp3"></audio>
+    <!-- Import JS files -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/profile.js"></script>
+  </body>
+
+</html>

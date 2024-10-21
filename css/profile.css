@@ -1,0 +1,115 @@
+:root {
+  --blue: #41A0F2;
+  --red: #EC1923;
+  --yellow: #FFA41D;
+  --brown: #543F46;
+  --white-shadow: 5px 10px 30px 5px rgba(255, 255, 255, 0.4);
+  --black-shadow: 5px 10px 30px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Animations */
+@keyframes go {
+
+  0%,
+  100% {
+    transform: translateX(1px);
+  }
+
+  50% {
+    transform: translateX(-3px);
+  }
+}
+
+/* Styling profile page */
+.profile-page {
+  &.over::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+  }
+
+  .side {
+    @media(max-width: 576px) {
+      width: 200px;
+      transform: translateX(200px);
+
+      &.open {
+        transform: translateX(0);
+      }
+    }
+
+    .arrow {
+      width: 30px;
+      height: 40px;
+      left: -30px;
+      color: var(--blue);
+      cursor: pointer;
+      transition: all .5s;
+
+      .animate {
+        animation: go .5s ease infinite alternate-reverse;
+      }
+    }
+
+    .navi-btn {
+      background-color: var(--blue);
+      color: white;
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        background-color: var(--brown);
+        color: var(--yellow);
+      }
+    }
+
+    .logout {
+      background-color: var(--red);
+      color: white;
+
+      &:hover {
+        background-color: rgb(176, 0, 0);
+      }
+    }
+  }
+
+  .redeem {
+    .card {
+      height: 320px;
+
+      @media(max-width: 576px) {
+        height: 350px;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  .settings {
+    .person-info {
+      .profile-img {
+        width: 80px;
+        height: 80px;
+        background-color: white;
+        border: 3px solid var(--blue);
+      }
+
+      .person-name {
+        color: var(--blue);
+      }
+    }
+  }
+
+  .done,
+  .error {
+    z-index: 21;
+  }
+
+}

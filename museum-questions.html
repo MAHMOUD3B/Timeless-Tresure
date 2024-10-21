@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of page -->
+    <title>اسئلة متحف ملوى</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap"
+      rel="stylesheet">
+    <!-- Import bootstrap files -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Import font awesome library -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- Import Styling file of home page -->
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+
+  <body>
+    <!-- Start questions page -->
+    <section
+      class="get-points py-5 text-light text-capitalize d-flex align-items-center justify-content-center">
+      <div class="d-flex">
+        <button class="home-centers places position-fixed btn fs-5" onclick="mallawi()">المزارات<i
+            class="fa fa-puzzle-piece me-1"></i></button>
+        <div class="score position-fixed badge fs-5 bg-success rounded-pill">
+          <span>نقاطك </span>
+          <span></span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="rounded-3 shadow-lg text-light p-3 my-4 w-100 mx-auto d-none"
+          id="questions-box">
+          <img class="mb-3 rounded-3 shadow-lg mx-auto d-block" src="" alt="" id="question-img">
+          <h3 class="text-center fw-bold mb-4" id="quiz-title"></h3>
+          <ol type="1" id="quiz-choises">
+            <li class="mb-3 fs-4 text-dark bg-white px-3 rounded-2 shadow">
+            </li>
+            <li class="mb-3 fs-4 text-dark bg-white px-3 rounded-2 shadow">
+            </li>
+            <li class="mb-3 fs-4 text-dark bg-white px-3 rounded-2 shadow">
+            </li>
+            <li class="mb-3 fs-4 text-dark bg-white px-3 rounded-2 shadow">
+            </li>
+          </ol>
+        </div>
+        <div class="rounded-3 shadow-lg text-light p-3 my-4 w-100 mx-auto d-none" id="attach">
+          <form class="d-flex flex-column align-items-center gap-3">
+            <label class="fs-3 fw-bold form-label" for="upload">ارفق صورة</label>
+            <input class="btn btn-success text-light fs-5 fw-bold" type="text" onblur="type='text'"
+              onclick="type='file'" id="upload" value="اختار صورة" readonly>
+          </form>
+          <div class="w-100 mt-3">
+            <button class="send btn fs-4 mx-auto mx-auto d-block" onclick="showAnswer()"
+              type="button">ارسال</button>
+          </div>
+        </div>
+        <div class="rounded-3 shadow-lg text-light p-3 my-4 w-100 mx-auto d-none" id="answer">
+          <div class="text-center">
+            <h3>الاجابة</h3>
+            <div class="imgs d-md-flex gap-3 justify-content-center">
+              <img class="ans-img rounded-3 my-3" src="" alt="" id="img1">
+              <img class="ans-img rounded-3 my-3" src="" alt="" id="img2">
+              <img class="ans-img rounded-3 my-3" src="" alt="" id="img3">
+            </div>
+            <p class="fs-4"></p>
+          </div>
+          <button class="next-question d-block btn fs-4 mt-5 mx-auto" onclick="nextQuestion()"
+            type="button">السؤال التالى</button>
+        </div>
+        <div class="d-none" id="report">
+          <p class="p-3 text-light fs-3 text-center bg-dark rounded-3 shadow-lg">
+            <span class="fs-2 fw-bold text-warning mx-2"></span>
+          </p>
+          <div class="link text-current w-100 d-flex align-items-center justify-content-center">
+            <button onclick="ashmonin()"
+              class="next-question btn fs-5 d-flex align-items-center my-4"><i
+                class="fa fa-angle-double-right ms-1"></i> المكان السابق</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Start tell el-amarna page -->
+    <audio src="./audio/success.wav" preload="auto" id="success" type="mp3"></audio>
+    <audio src="./audio/fail.wav" preload="auto" id="fail" type="mp3"></audio>
+    <!-- Import JS files -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/museum-questions.js"></script>
+  </body>
+
+</html>
