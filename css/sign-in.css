@@ -1,8 +1,8 @@
 :root {
-  --blue: #41A0F2;
-  --red: #EC1923;
-  --yellow: #FFA41D;
-  --brown: #543F46;
+  --blue: #41a0f2;
+  --red: #ec1923;
+  --yellow: #ffa41d;
+  --brown: #543f46;
   --white-shadow: 5px 10px 30px 5px rgba(255, 255, 255, 0.4);
   --black-shadow: 5px 10px 30px 5px rgba(0, 0, 0, 0.4);
 }
@@ -19,13 +19,14 @@ body {
   height: 100vh;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #0006;
+    backdrop-filter: blur(2px);
     z-index: 1;
   }
 
@@ -40,15 +41,17 @@ body {
     .login-box,
     .signup-box {
       width: 360px;
+      border: 1px solid #fff8;
       border-radius: 10px;
-      background-color: rgba(255, 255, 255, 0.5);
-      box-shadow: var(--black-shadow);
+      background-color: #fff7;
+      box-shadow: var(--white-shadow);
+      backdrop-filter: blur(4px);
 
       .logo {
         width: 120px;
       }
 
-      @media(max-width: 576px) {
+      @media (max-width: 576px) {
         width: 280px;
       }
 
@@ -62,19 +65,17 @@ body {
     }
 
     .sign-link {
-      color: var(--yellow);
+      color: var(--blue);
     }
   }
 }
 
 .portal {
-  background-image: url("../imgs/landing2.jpg");
+  background: url("../imgs/landing2.jpg") no-repeat center;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -85,7 +86,7 @@ body {
   }
 
   .btn-tran {
-    transition: .5s;
+    transition: 0.5s;
     background-color: var(--blue);
     color: white;
     &:hover {

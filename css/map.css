@@ -1,0 +1,118 @@
+.main-page {
+  background: url("../imgs/landing1.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0005;
+    z-index: 1;
+  }
+
+  .profile {
+    top: 20px;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    z-index: 10;
+    cursor: pointer;
+    background-color: white;
+    border: 3px solid var(--blue);
+    transform: translateX(-50%);
+
+    .img-profile {
+      width: 65px;
+    }
+  }
+
+  /* Styling avatar section */
+  .avatar {
+    height: 100vh;
+    transition: 1s;
+    opacity: 0;
+    z-index: 2;
+
+    .image {
+      top: 35%;
+      position: relative;
+      &::after {
+        content: "";
+        width: 200px;
+        height: 100px;
+        background-color: var(--blue);
+        border-radius: 10px;
+        position: absolute;
+        top: -100px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        border-width: 20px;
+        border-style: solid;
+        border-color: var(--blue) transparent transparent transparent;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      img {
+        width: 300px;
+      }
+    }
+  }
+
+  /* Styling map section */
+  .map {
+    backdrop-filter: blur(5px);
+    border: 1px solid #fff8;
+    background: #fff3;
+    box-shadow: var(--white-shadow);
+
+    .shape {
+      width: 85px;
+      height: 85px;
+      cursor: pointer;
+      transition: 0.5s;
+      border: 3px solid var(--blue);
+      box-shadow: var(--black-shadow);
+
+      &:hover {
+        transform: scale(1.2) translateY(-10px);
+        box-shadow: var(--white-shadow);
+      }
+
+      &:hover .tool {
+        opacity: 1;
+      }
+
+      .tool {
+        bottom: -30px;
+        opacity: 0;
+      }
+
+      &.locked {
+        filter: grayscale(1);
+        pointer-events: none;
+
+        a {
+          cursor: no-drop;
+        }
+
+        &:hover {
+          box-shadow: var(--white-shadow);
+        }
+      }
+      @media (max-width: 767px) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    @media (max-width: 767px) {
+      padding: 35px;
+    }
+  }
+}

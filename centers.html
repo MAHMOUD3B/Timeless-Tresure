@@ -1,119 +1,177 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-      content="This is game for tourism to learn and inform people about tourism places with exiting way">
-    <meta name="Keywords" content="Tourism - tours - game - travel">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is game for tourism to learn and inform people about tourism places with exiting way"
+    />
+    <meta name="Keywords" content="Tourism - tours - game - travel" />
     <!-- Title of page -->
     <title>المراكز</title>
     <!-- favicon -->
-    <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon" />
     <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap"
-      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap"
+      rel="stylesheet"
+    />
     <!-- Import bootstrap files -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <!-- Import font awesome library -->
-    <link rel="stylesheet" href="./css/all.min.css">
-    <!-- Import Styling file of home page -->
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Import Styling file -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/map.css" />
   </head>
 
   <body class="text-capitalize">
-    <div class="body">
+    <div class="main-page">
       <!-- start map section -->
-      <section class="map centers position-relative">
-        <button class="home-govs position-fixed btn fs-5" onclick="govs()"><i
-            class="fa fa-map-location-dot"></i> المحافظات</button>
-        <div class="line">
-          <h3 class="position-absolute d-none d-md-block">اختار مركز</h3>
-          <div class="row">
-            <div class="col-6 col-md-3 text-center">
-              <div class="shape one rounded-circle position-absolute">
+      <section class="container position-relative z-1 h-100">
+        <button class="home-govs position-fixed btn fs-5" onclick="govs()">
+          <i class="fa fa-map-location-dot"></i> المحافظات
+        </button>
+        <div
+          class="row flex-column align-items-center justify-content-center gap-5 h-100"
+        >
+          <div class="row map rounded p-5">
+            <div class="col-6 col-md-3">
+              <div class="shape rounded-circle position-relative mx-auto my-2">
                 <span
-                  class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2 text-nowrap">Mallawi</span>
+                  class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2 text-nowrap"
+                  >Mallawi</span
+                >
                 <a onclick="mallawi()">
-                  <img class="rounded-circle img-fluid border border-3 border-light"
-                    src="./imgs/mallawy.jpg" alt="mallawi Logo">
+                  <img
+                    class="rounded-circle img-fluid border border-3 border-light"
+                    src="./imgs/mallawy.jpg"
+                    alt="mallawi Logo"
+                  />
                 </a>
               </div>
             </div>
             <div class="col-6 col-md-3">
-              <div class="shape locked two rounded-circle position-absolute">
+              <div
+                class="shape locked rounded-circle position-relative mx-auto my-2"
+              >
                 <span
-                  class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2 text-nowrap">Maghagha</span>
-                <a href="#"><img class="rounded-circle img-fluid border border-3 border-light"
-                    src="./imgs/maghagh.jpg" alt="Minia Logo"></a>
-              </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="shape locked three rounded-circle position-absolute">
-                <span
-                  class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2 text-nowrap">Samalot</span>
-                <a href="#"><img class="rounded-circle img-fluid border border-3 border-light"
-                    src="./imgs/samalot.jpg" alt="Minia Logo"></a>
-              </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="shape four rounded-circle position-absolute">
-                <span
-                  class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2 text-nowrap">Bani
-                  mazar</span>
-                <a onclick="bhnasa();"><img
+                  class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2 text-nowrap"
+                  >Maghagha</span
+                >
+                <a href="#"
+                  ><img
                     class="rounded-circle img-fluid border border-3 border-light"
-                    src="./imgs/bani-mathar.jpg" alt="Minia Logo"></a>
+                    src="./imgs/maghagh.jpg"
+                    alt="Minia Logo"
+                /></a>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div
+                class="shape locked rounded-circle position-relative mx-auto my-2"
+              >
+                <span
+                  class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2 text-nowrap"
+                  >Samalot</span
+                >
+                <a href="#"
+                  ><img
+                    class="rounded-circle img-fluid border border-3 border-light"
+                    src="./imgs/samalot.jpg"
+                    alt="Minia Logo"
+                /></a>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="shape rounded-circle position-relative mx-auto my-2">
+                <span
+                  class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2 text-nowrap"
+                  >Bani mazar</span
+                >
+                <a onclick="bhnasa();"
+                  ><img
+                    class="rounded-circle img-fluid border border-3 border-light"
+                    src="./imgs/bani-mathar.jpg"
+                    alt="Minia Logo"
+                /></a>
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row map rounded p-5">
             <div class="col-6 col-md-3">
-              <div class="shape five rounded-circle position-absolute">
+              <div class="shape rounded-circle position-relative mx-auto my-2">
                 <span
-                  class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2 text-nowrap">Nile</span>
-                <a onclick="nile();"><img
+                  class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2 text-nowrap"
+                  >Nile</span
+                >
+                <a onclick="nile();"
+                  ><img
                     class="rounded-circle img-fluid border border-3 border-light"
-                    src="./imgs/nile.jpg" alt="Minia Logo"></a>
+                    src="./imgs/nile.jpg"
+                    alt="Minia Logo"
+                /></a>
               </div>
             </div>
             <div class="col-6 col-md-3">
-              <div class="shape locked six rounded-circle position-absolute">
+              <div
+                class="shape locked rounded-circle position-relative mx-auto my-2"
+              >
                 <span
-                  class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2 text-nowrap">Dermouse</span>
-                <a href="#"><img class="rounded-circle img-fluid border border-3 border-light"
-                    src="./imgs/dermoas.jpg" alt="Minia Logo"></a>
+                  class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2 text-nowrap"
+                  >Dermouse</span
+                >
+                <a href="#"
+                  ><img
+                    class="rounded-circle img-fluid border border-3 border-light"
+                    src="./imgs/dermoas.jpg"
+                    alt="Minia Logo"
+                /></a>
               </div>
             </div>
             <div class="col-6 col-md-3">
-              <div class="shape locked seven rounded-circle position-absolute">
+              <div
+                class="shape locked rounded-circle position-relative mx-auto my-2"
+              >
                 <span
-                  class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2 text-nowrap">Edwaa</span>
-                <a href="#"><img class="rounded-circle img-fluid border border-3 border-light"
-                    src="./imgs/edwa.jpg" alt="Minia Logo"></a>
+                  class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2 text-nowrap"
+                  >Edwaa</span
+                >
+                <a href="#"
+                  ><img
+                    class="rounded-circle img-fluid border border-3 border-light"
+                    src="./imgs/edwa.jpg"
+                    alt="Minia Logo"
+                /></a>
               </div>
             </div>
             <div class="col-6 col-md-3">
-              <div class="shape locked eight rounded-circle position-absolute">
+              <div
+                class="shape locked rounded-circle position-relative mx-auto my-2"
+              >
                 <span
-                  class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2 text-nowrap">Matay</span>
-                <a href="#"><img class="rounded-circle img-fluid border border-3 border-light"
-                    src="./imgs/matay.jpg" alt="Minia Logo"></a>
+                  class="tool position-absolute start-50 translate-middle-x z-3 text-bg-warning px-2 rounded-2 text-nowrap"
+                  >Matay</span
+                >
+                <a href="#"
+                  ><img
+                    class="rounded-circle img-fluid border border-3 border-light"
+                    src="./imgs/matay.jpg"
+                    alt="Minia Logo"
+                /></a>
               </div>
             </div>
           </div>
         </div>
       </section>
       <!-- start map section -->
-
     </div>
     <!-- Import JS files -->
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/all.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
-
 </html>
